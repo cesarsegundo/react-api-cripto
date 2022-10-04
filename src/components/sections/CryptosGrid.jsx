@@ -12,10 +12,11 @@ const CryptosGrid = () => {
     fetchingData();
   }, []);
   return (
-    <div className="m-2 grid grid-cols-4 gap-2">
+    <div className="m-4 grid sm:grid-cols-4 gap-2 grid-cols-1">
       {cryptos.map((crypto) => (
         <Crypto
           key={crypto.id}
+          id={crypto.id}
           name={crypto.name}
           rank={crypto.rank}
           priceUsd={crypto.priceUsd}
